@@ -11,6 +11,8 @@ const products = [
 
 // create a get endpoint and execute any cb when a req is received
 app.get("/", (req, res) => {
+    console.log("req", req.url);
+    console.log("req", req.headers);
     res.send("<h1>Home Page</h1>");
 })
 
