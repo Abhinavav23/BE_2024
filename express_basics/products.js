@@ -53,7 +53,7 @@ app.get("/product", (req, res) => {
   }
 });
 
-app.post("/product/new", (req, res) => {
+app.post("/product/new", (req, res) => {̀
     // create a new product
     // need data from request
     console.log("body", req.body);
