@@ -11,7 +11,7 @@ const blogSchema = new Schema({
     required: true,
     minLength: 10,
   },
-  tag: {
+  tags: {
     type: [String],
     default: ["General"],
     required: true
@@ -32,8 +32,13 @@ const blogSchema = new Schema({
   downVote: {
     type: Number,
     default: 0
-  }
-
+  },
+  comments: [
+    {
+        type: Schema.Types.ObjectId,
+        ref: "Comment"
+    }
+  ]
 });
 
 const blogModel = model("blogs", blogSchema);
